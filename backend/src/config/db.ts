@@ -17,7 +17,7 @@ const connectDB = async () => {
     console.log('MongoDB connected successfully');
   } catch (error) {
     console.error('MongoDB connection error:', error);
-    process.exit(1);
+    console.warn('Server will continue running, but database features will not work until a valid MONGO_URI is provided.');
   }
 };
 
